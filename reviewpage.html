@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="C:\Users\AL-RASHEED\OneDrive\Desktop\ayesha project\style.css\style4.css">
+    <script defer>
+        // JavaScript for Submit Button Functionality
+        document.addEventListener("DOMContentLoaded", () => {
+            const submitButton = document.querySelector(".submit-btn");
+
+            submitButton.addEventListener("click", () => {
+                // Get the values of the input fields
+                const feedback = document.getElementById("feedback").value.trim();
+                const changes = document.getElementById("changes").value.trim();
+                const problems = document.getElementById("problems").value.trim();
+
+                // Validate the inputs
+                if (!feedback && !changes && !problems) {
+                    alert("Please fill in at least one field before submitting.");
+                    return;
+                }
+
+                // Simulate submission (display in the console)
+                console.log("Feedback Submitted:");
+                console.log("Feedback: ", feedback);
+                console.log("Requested Changes: ", changes);
+                console.log("Problems: ", problems);
+
+                // Display a success message
+                alert("Thank you for your feedback!");
+
+                // Clear the fields after submission
+                document.getElementById("feedback").value = "";
+                document.getElementById("changes").value = "";
+                document.getElementById("problems").value = "";
+            });
+        });
+    </script>
+</head>
+<body>
+    <!-- Header with Navigation Links -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a href="#" class="navbar-brand">Periodic Table</a>
+                <div class="navbar-nav">
+                    <!-- Navigation links -->
+                    <a href="index.html" class="nav-link" onclick="showPage('home-page')">Home Page</a>
+                    <a href="trendspage.html" class="nav-link" onclick="showPage('trends-page')">Trends Page</a>
+                    <a href="researchpage.html" class="nav-link" onclick="showPage('research-page')">Research Page</a>
+                    <a href="reviewpage.html" class="nav-link" onclick="showPage('review-page')">Review Page</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h3 class="text-center my-4">Review Section</h3>
+        <div class="mb-3">
+            <label for="feedback" class="form-label">Your feedback matters a lot:</label>
+            <textarea id="feedback" class="form-control" rows="3" placeholder="Type here..."></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="changes" class="form-label">Any changes you want:</label>
+            <textarea id="changes" class="form-control" rows="3" placeholder="Type here..."></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="problems" class="form-label">Any problem?</label>
+            <textarea id="problems" class="form-control" rows="3" placeholder="Type here..."></textarea>
+        </div>
+        <div class="text-center">
+            <button type="button" class="btn btn-primary submit-btn">Submit</button>
+        </div>
+    </main>
+    <footer class="footer" style="background-color: black; text-align: center; color: white; padding: 10px;">
+        <p>Thank you for your time</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

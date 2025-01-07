@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/style1.css">
+    <script src="script.js" defer></script>
+</head>
+<style>
+.table {
+    display: grid;
+    grid-template-columns: repeat(18, 50px);
+    grid-auto-rows: 50px;
+    gap: 5px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.element {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #e3e3e3;
+    text-align: center;
+    font-size: 12px;
+}
+
+.element span {
+    display: block;
+}
+
+.spacer {
+    background: none;
+    border: none;
+}
+
+.alkali { background-color: #ff9999; }
+.alkaline-earth { background-color: #ffd699; }
+.transition { background-color: #c3e8ff; }
+.metalloid { background-color: #ccffcc; }
+.nonmetal { background-color: #ffffcc; }
+.halogen { background-color: #ffccff; }
+.noble-gas { background-color: #d6ccff; }
+.lanthanide { background-color: #ffc0cb; }
+.actinide { background-color: #ffb3b3; }
+</style>
+<body>
+   <div class="header">
+      <!-- Header with Navigation Links -->
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="height: 90px;">
+                <div class="container-fluid">
+                    <a class="navbar-brand"> Periodic Table</a>
+                    <div class="navbar-nav">
+                        <!-- Navigation links -->
+                        <a href="index.html" class="nav-link" onclick="showPage('home-page')">Home Page</a>
+                        <a href="trendspage.html" class="nav-link" onclick="showPage('trends-page')">Trends Page</a>
+                        <a href="researchpage.html" class="nav-link" onclick="showPage('research-page')">Research Page</a>
+                        <a href="reviewpage.html" class="nav-link" onclick="showPage('review-page')">Review Page</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+    </div>
+    
+    <main class="container">
+        <!-- Main Content Section -->
+        <div class="table">
+             <!-- First row -->
+            <div class="element alkali"><span class="number">1</span><span>H</span><span>Hydrogen</span></div>
+            <div class="spacer" style="grid-column: span 16;"></div>
+            <div class="element noble-gas"><span class="number">2</span><span>He</span><span>Helium</span></div>
+
+            <!-- Second row -->
+            <div class="element alkali"><span class="number">3</span><span>Li</span><span>Lithium</span></div>
+            <div class="element alkaline-earth"><span class="number">4</span><span>Be</span><span>Beryllium</span></div>
+            <div class="spacer" style="grid-column: span 10;"></div>
+            <div class="element metalloid"><span class="number">5</span><span>B</span><span>Boron</span></div>
+            <div class="element nonmetal"><span class="number">6</span><span>C</span><span>Carbon</span></div>
+            <div class="element nonmetal"><span class="number">7</span><span>N</span><span>Nitrogen</span></div>
+            <div class="element nonmetal"><span class="number">8</span><span>O</span><span>Oxygen</span></div>
+            <div class="element halogen"><span class="number">9</span><span>F</span><span>Fluorine</span></div>
+            <div class="element noble-gas"><span class="number">10</span><span>Ne</span><span>Neon</span></div>
+
+            <!-- Third row -->
+            <div class="element alkali"><span class="number">11</span><span>Na</span><span>Sodium</span></div>
+            <div class="element alkaline-earth"><span class="number">12</span><span>Mg</span><span>Magnesium</span></div>
+            <div class="spacer" style="grid-column: span 10;"></div>
+            <div class="element metalloid"><span class="number">13</span><span>Al</span><span>Aluminum</span></div>
+            <div class="element metalloid"><span class="number">14</span><span>Si</span><span>Silicon</span></div>
+            <div class="element nonmetal"><span class="number">15</span><span>P</span><span>Phosphorus</span></div>
+            <div class="element nonmetal"><span class="number">16</span><span>S</span><span>Sulfur</span></div>
+            <div class="element halogen"><span class="number">17</span><span>Cl</span><span>Chlorine</span></div>
+            <div class="element noble-gas"><span class="number">18</span><span>Ar</span><span>Argon</span></div>
+
+            <!-- Fourth row -->
+            <div class="element alkali"><span class="number">19</span><span>K</span><span>Potassium</span></div>
+            <div class="element alkaline-earth"><span class="number">20</span><span>Ca</span><span>Calcium</span></div>
+            <div class="element transition"><span class="number">21</span><span>Sc</span><span>Scandium</span></div>
+            <div class="element transition"><span class="number">22</span><span>Ti</span><span>Titanium</span></div>
+            <div class="element transition"><span class="number">23</span><span>V</span><span>Vanadium</span></div>
+            <div class="element transition"><span class="number">24</span><span>Cr</span><span>Chromium</span></div>
+            <div class="element transition"><span class="number">25</span><span>Mn</span><span>Manganese</span></div>
+            <div class="element transition"><span class="number">26</span><span>Fe</span><span>Iron</span></div>
+            <div class="element transition"><span class="number">27</span><span>Co</span><span>Cobalt</span></div>
+            <div class="element transition"><span class="number">28</span><span>Ni</span><span>Nickel</span></div>
+            <div class="element transition"><span class="number">29</span><span>Cu</span><span>Copper</span></div>
+            <div class="element transition"><span class="number">30</span><span>Zn</span><span>Zinc</span></div>
+            <div class="element metalloid"><span class="number">31</span><span>Ga</span><span>Gallium</span></div>
+            <div class="element metalloid"><span class="number">32</span><span>Ge</span><span>Germanium</span></div>
+            <div class="element nonmetal"><span class="number">33</span><span>As</span><span>Arsenic</span></div>
+            <div class="element nonmetal"><span class="number">34</span><span>Se</span><span>Selenium</span></div>
+            <div class="element halogen"><span class="number">35</span><span>Br</span><span>Bromine</span></div>
+            <div class="element noble-gas"><span class="number">36</span><span>Kr</span><span>Krypton</span></div>
+
+            <!-- Fifth row -->
+            <div class="element alkali"><span class="number">37</span><span>Rb</span><span>Rubidium</span></div>
+            <div class="element alkaline-earth"><span class="number">38</span><span>Sr</span><span>Strontium</span></div>
+            <div class="element transition"><span class="number">39</span><span>Y</span><span>Yttrium</span></div>
+            <div class="element transition"><span class="number">40</span><span>Zr</span><span>Zirconium</span></div>
+            <div class="element transition"><span class="number">41</span><span>Nb</span><span>Niobium</span></div>
+            <div class="element transition"><span class="number">42</span><span>Mo</span><span>Molybdenum</span></div>
+            <div class="element transition"><span class="number">43</span><span>Tc</span><span>Technetium</span></div>
+            <div class="element transition"><span class="number">44</span><span>Ru</span><span>Ruthenium</span></div>
+            <div class="element transition"><span class="number">45</span><span>Rh</span><span>Rhodium</span></div>
+            <div class="element transition"><span class="number">46</span><span>Pd</span><span>Palladium</span></div>
+            <div class="element transition"><span class="number">47</span><span>Ag</span><span>Silver</span></div>
+            <div class="element transition"><span class="number">48</span><span>Cd</span><span>Cadmium</span></div>
+            <div class="element metalloid"><span class="number">49</span><span>In</span><span>Indium</span></div>
+            <div class="element metalloid"><span class="number">50</span><span>Sn</span><span>Tin</span></div>
+            <div class="element nonmetal"><span class="number">51</span><span>Sb</span><span>Antimony</span></div>
+            <div class="element nonmetal"><span class="number">52</span><span>Te</span><span>Tellurium</span></div>
+            <div class="element halogen"><span class="number">53</span><span>I</span><span>Iodine</span></div>
+            <div class="element noble-gas"><span class="number">54</span><span>Xe</span><span>Xenon</span></div>
+
+            <!-- Sixth row -->
+            <div class="element alkali"><span class="number">55</span><span>Cs</span><span>Cesium</span></div>
+            <div class="element alkaline-earth"><span class="number">56</span><span>Ba</span><span>Barium</span></div>
+            <div class="element transition"><span class="number">57-71</span><span>*</span><span>Acitinides</span></div>
+            <div class="element transition"><span class="number">72</span><span>Hf</span><span>Hafnium</span></div>
+            <div class="element transition"><span class="number">73</span><span>Ta</span><span>Tantalum</span></div>
+            <div class="element transition"><span class="number">74</span><span>W</span><span>Tungsten</span></div>
+            <div class="element transition"><span class="number">75</span><span>Re</span><span>Rhenium</span></div>
+            <div class="element transition"><span class="number">76</span><span>Os</span><span>Osmium</span></div>
+            <div class="element transition"><span class="number">77</span><span>Ir</span><span>Iridium</span></div>
+            <div class="element transition"><span class="number">78</span><span>Pt</span><span>Platinum</span></div>
+            <div class="element transition"><span class="number">79</span><span>Au</span><span>Gold</span></div>
+            <div class="element transition"><span class="number">80</span><span>Hg</span><span>Mercury</span></div>
+            <div class="element metalloid"><span class="number">81</span><span>Tl</span><span>Thallium</span></div>
+            <div class="element metalloid"><span class="number">82</span><span>Pb</span><span>Lead</span></div>
+            <div class="element metalloid"><span class="number">83</span><span>Bi</span><span>Bismuth</span></div>
+            <div class="element nonmetal"><span class="number">84</span><span>Po</span><span>Polonium</span></div>
+            <div class="element halogen"><span class="number">85</span><span>At</span><span>Astatine</span></div>
+            <div class="element noble-gas"><span class="number">86</span><span>Rn</span><span>Radon</span></div>
+
+            <!-- Seventh row -->
+            <div class="element alkali"><span class="number">87</span><span>Fr</span><span>Francium</span></div>
+            <div class="element alkaline-earth"><span class="number">88</span><span>Ra</span><span>Radium</span></div>
+            <div class="element transition"><span class="number">89-103</span><span>**</span><span>Lanthacides</span></div>
+            <div class="element transition"><span class="number">104</span><span>Rf</span><span>Rutherfordium</span></div>
+            <div class="element transition"><span class="number">105</span><span>Db</span><span>Dubnium</span></div>
+            <div class="element transition"><span class="number">106</span><span>Sg</span><span>Seaborgium</span></div>
+            <div class="element transition"><span class="number">107</span><span>Bh</span><span>Bohrium</span></div>
+            <div class="element transition"><span class="number">108</span><span>Hs</span><span>Hassium</span></div>
+            <div class="element transition"><span class="number">109</span><span>Mt</span><span>Meitnerium</span></div>
+            <div class="element transition"><span class="number">110</span><span>Ds</span><span>Darmstadtium</span></div>
+            <div class="element transition"><span class="number">111</span><span>Rg</span><span>Roentgenium</span></div>
+            <div class="element transition"><span class="number">112</span><span>Cn</span><span>Copernicium</span></div>
+            <div class="element transition"><span class="number">113</span><span>Nh</span><span>Nihonium</span></div>
+            <div class="element transition"><span class="number">114</span><span>Fl</span><span>Flerovium</span></div>
+            <div class="element transition"><span class="number">115</span><span>Mc</span><span>Moscovium</span></div>
+            <div class="element transition"><span class="number">116</span><span>Lv</span><span>Livermorium</span></div>
+            <div class="element halogen"><span class="number">117</span><span>Ts</span><span>Tennessine</span></div>
+            <div class="element noble-gas"><span class="number">118</span><span>Og</span><span>Oganesson</span></div>
+            <br>
+            <!-- Lanthicides -->
+            <div class="element lanthanide"><span class="number">57</span><span>La</span><span>Lanthanum</span></div>
+            <div class="element transition"><span class="number">58</span><span>Ce</span><span>Cerium</span></div>
+            <div class="element transition"><span class="number">59</span><span>Pr</span><span>Praseodymium</span></div>
+            <div class="element transition"><span class="number">60</span><span>Nd</span><span>Neodymium</span></div>
+            <div class="element transition"><span class="number">61</span><span>Pm</span><span>Promethium</span></div>
+            <div class="element transition"><span class="number">62</span><span>Sm</span><span>Samarium</span></div>
+            <div class="element transition"><span class="number">63</span><span>Eu</span><span>Europium</span></div>
+            <div class="element transition"><span class="number">64</span><span>Gd</span><span>Gadolinium</span></div>
+            <div class="element transition"><span class="number">65</span><span>Tb</span><span>Terbium</span></div>
+            <div class="element transition"><span class="number">66</span><span>Dysprosium</span></div>
+            <div class="element transition"><span class="number">67</span><span>Ho</span><span>Holmium</span></div>
+            <div class="element transition"><span class="number">68</span><span>Er</span><span>Erbium</span></div>
+            <div class="element transition"><span class="number">69</span><span>Tm</span><span>Thulium</span></div>
+            <div class="element transition"><span class="number">70</span><span>Yb</span><span>Ytterbium</span></div>
+            <div class="element transition"><span class="number">71</span><span>Lu</span><span>Lutetium</span></div>
+            <br>
+            <div class="horizontal-rule"></div>
+            <br>
+            <!-- Actinides -->
+            <div class="element actinide"><span class="number">89</span><span>Ac</span><span>Actinium</span></div>
+            <div class="element transition"><span class="number">90</span><span>Th</span><span>Thorium</span></div>
+            <div class="element transition"><span class="number">91</span><span>Pa</span><span>Protactinium</span></div>
+            <div class="element transition"><span class="number">92</span><span>U</span><span>Uranium</span></div>
+            <div class="element transition"><span class="number">93</span><span>Np</span><span>Neptunium</span></div>
+            <div class="element transition"><span class="number">94</span><span>Pu</span><span>Plutonium</span></div>
+            <div class="element transition"><span class="number">95</span><span>Am</span><span>Americium</span></div>
+            <div class="element transition"><span class="number">96</span><span>Cm</span><span>Curium</span></div>
+            <div class="element transition"><span class="number">97</span><span>Bk</span><span>Berkelium</span></div>
+            <div class="element transition"><span class="number">98</span><span>Cf</span><span>Californium</span></div>
+            <div class="element transition"><span class="number">99</span><span>Es</span><span>Einsteinium</span></div>
+            <div class="element transition"><span class="number">100</span><span>Fm</span><span>Fermium</span></div>
+            <div class="element transition"><span class="number">101</span><span>Md</span><span>Mendelevium</span></div>
+            <div class="element transition"><span class="number">102</span><span>No</span><span>Nobelium</span></div>
+            <div class="element transition"><span class="number">103</span><span>Lr</span><span>Lawrencium</span></div>
+        </div>
+    </main>
+    <footer class="footer" style="background-color: black; text-align: center; color: white; padding: 10px;">
+        <p>Thank you for your time</p>
+    </footer>
+
+    </footer> <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="C:\Users\AL-RASHEED\OneDrive\Desktop\ICT periodic table\script.js\script.js"></script>
+
+</body>
+</html>
